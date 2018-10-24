@@ -2,8 +2,7 @@
     require 'templates/header.php';
 ?>
 
-<div>
-
+<div class="bg">
 </div>
 
 <?php
