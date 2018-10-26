@@ -1,5 +1,6 @@
 <?php
-require 'templates/header.php';
+    require'../php/redir.php';
+    require 'templates/header.php';
 ?>
 
     <link rel="stylesheet" href="../css/tendency.css">
