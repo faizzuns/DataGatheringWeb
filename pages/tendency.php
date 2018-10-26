@@ -23,7 +23,7 @@
                     <form method="post" class="margin-bot-medium" action="../php/tendency-action.php">
                         <div class="margin-left-very-large margin-right-very-large margin-bot-medium">
                             <div class="flex center-horizontal">
-                                <input name="tendency" type="range" class="custom-range" min="0" max="20" id="customRange3" onchange="changeDetail(customRange3.value)">
+                                <input name="tendency" type="range" class="custom-range" min="0" max="20" id="customRange3" oninput="changeDetail(customRange3.value)">
                             </div>
                             <div class="center-horizontal flex">
                                 <div class="flex space-beetween full-width margin-top-small">
