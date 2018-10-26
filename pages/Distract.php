@@ -9,13 +9,26 @@ require 'templates/header.php';
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-9">
+            <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
                     <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>ikan hiu makan hiu, yuk main yuk</strong></div>
-                    <div>
-                        <script src="https://cdn.htmlgames.com/embed.js?game=GardenSecretsFindTheDifferences&amp;width=800&amp;height=480&amp;bgcolor=white"></script>
+                    <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
+                        <div class="margin-very-large">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                     </div>
+
+                    <div style="text-align:center;">
+                        <img style="width:50%; height:60%; padding-top: 2%" src="../upload/quiz1.png" >
+                    </div>
+                    <div class="form-group " style="font-size:18px">
+                        <div class="margin-top-large" style="text-align: center">Berapakah jawabannya?</div>
+                         </div>
+                        <div style="text-align: center">
+                            <input class="col-2"  type="text" class="form-control" id="nama" >
+                        </div>
+
+
                     <form class="flex center-horizontal margin-bot-medium margin-top-large" action="#">
                         <input type="submit" value="Lanjut ae dah" class="btn btn-outline-dark quarter">
                     </form>
