@@ -7,11 +7,11 @@ DROP TABLE IF EXISTS `transaction`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `transaction` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  `from` varchar(100) DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
+  `age` int(11) NOT NULL,
+  `from` varchar(100) NOT NULL,
   `tendency` int(11) DEFAULT NULL,
-  `id_news` int(11) NOT NULL,
+  `id_news` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
