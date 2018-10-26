@@ -38,6 +38,11 @@ footer {
     z-index: 10;
 }
 
+.box-home {
+    border-radius: 5px;
+    background-color: white;
+}
+
 .margin-left-small {margin-left: 8px;}
 .margin-right-small {margin-right: 8px;}
 .margin-top-small {margin-top: 8px;}
