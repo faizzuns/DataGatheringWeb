@@ -1,4 +1,8 @@
 <?php
+require '../php/redir.php';
+if ($row['tendency'] == null) {
+    header("Location: tendency.php");
+}
 require 'templates/header.php';
 ?>
 

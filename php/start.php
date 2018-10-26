@@ -7,7 +7,16 @@
  */
 
     require 'connect.php';
-$sql = 'INSERT INTO gather.`transaction` (buyer, book, amount, order_date) VALUES ';
+    $sql = "INSERT INTO gather.`transaction` (gather.`transaction`.name, gather.`transaction`.age, gather.`transaction`.from) VALUES ('" . $_POST['name'] . "'," . $_POST['age'] . ",'" . $_POST['from'] . "')";
+    if ($conn->query($sql) === TRUE) {
+        $last_id = $conn->insert_id;
+
+        setcookie('trans', $last_id, time() + 3600, '/');
+        header('Location: ../pages/tendency.php');
+        die();
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
     $conn->close();
 
 ?>
