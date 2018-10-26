@@ -1,0 +1,14 @@
+.box-home {
+    border-radius: 5px;
+    background-color: white;
+}
+
+.profile-img {
+    border-radius: 100%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #37474F;
+    width: 180px;
+    height: 180px;
+}
+
