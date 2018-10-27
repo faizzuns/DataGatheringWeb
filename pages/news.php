@@ -2,6 +2,7 @@
 require '../php/redir.php';
 if ($row['tendency'] == null) {
     header("Location: tendency.php");
+    die();
 }
 require 'templates/header.php';
 require '../php/connect.php';
@@ -12,6 +13,7 @@ require '../php/connect.php';
     while ($row = $result->fetch_assoc()) {
         if ($row['total'] < $min_value) {
             $min = $row['id_news'];
+            $min_value = $row['total'];
         }
     }
 

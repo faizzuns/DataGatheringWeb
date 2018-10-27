@@ -24,6 +24,7 @@ if (isset($_COOKIE['trans'])) {
 //    die();
 } else {
     header('Location: ../pages/home.php');
+    die();
 }
 $conn->close();
 

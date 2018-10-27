@@ -1,4 +1,13 @@
 <?php
+require '../php/redir.php';
+if ($row['tendency'] == null) {
+    header("Location: tendency.php");
+    die();
+}
+if ($row['id_news'] == null) {
+    header("Location: news.php");
+    die();
+}
 require 'templates/header.php';
 ?>
 

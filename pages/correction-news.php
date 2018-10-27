@@ -2,6 +2,7 @@
 require '../php/redir.php';
 if ($row['tendency'] == null) {
     header("Location: tendency.php");
+    die();
 }
 require 'templates/header.php';
 ?>
