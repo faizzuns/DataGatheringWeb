@@ -6,15 +6,38 @@ if ($row['tendency'] == null) {
 }
 require 'templates/header.php';
 require '../php/connect.php';
-    $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL GROUP BY gather.`transaction`.id_news";
+    if ($_COOKIE['tendency'] == 10) {
+        $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency = 10 GROUP BY gather.`transaction`.id_news";
+    } else if ($_COOKIE['tendency'] < 10) {
+        $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency < 10 GROUP BY gather.`transaction`.id_news";
+    } else if ($_COOKIE['tendency'] > 10) {
+        $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency > 10 GROUP BY gather.`transaction`.id_news";
+    }
+
     $result = $conn->query($sql);
-    $min = 1;
-    $min_value = 10000;
+    $news1 = 0; //netral
+    $news2 = 0; //positif
+    $news3 = 0; //negatif
     while ($row = $result->fetch_assoc()) {
-        if ($row['total'] < $min_value) {
-            $min = $row['id_news'];
-            $min_value = $row['total'];
+        if ($row['id_news'] == 1) {
+            $news1 = $news1 + $row['total'];
+        } else if ($row['id_news'] == 2) {
+            $news2 = $news2 + $row['total'];
+        } else {
+            $news3 = $news3 + $row['total'];
         }
+    }
+
+    if ($news1 < $news2) {
+        if ($news1 < $news3) {
+            $min = 1;
+        } else {
+            $min = 3;
+        }
+    } else if ($news2 < $news3) {
+        $min = 2;
+    } else {
+        $min = 3;
     }
 
     if ($min > 1) {
