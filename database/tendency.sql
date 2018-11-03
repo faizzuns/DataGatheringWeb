@@ -9,6 +9,8 @@ CREATE TABLE `transaction` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `age` int(11) NOT NULL,
+  `profesi` varchar(100) NOT NULL,
+  `pendidikan` varchar(100) NOT NULL,
   `from` varchar(100) NOT NULL,
   `tendency` int(11) DEFAULT NULL,
   `id_news` int(11) DEFAULT NULL,
