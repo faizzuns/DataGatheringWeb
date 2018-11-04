@@ -2,6 +2,7 @@
 require 'templates/header.php';
 ?>
 
+<link rel="stylesheet" href="../css/TFeeling.css">
     <div class="bg">
     </div>
 
@@ -17,45 +18,39 @@ require 'templates/header.php';
                         <div class="margin-large">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                     </div>
-
-
-
+                    <div class="ml-4">
                     <form class="center-horizontal margin-bot-medium" action="#">
-                        <form>
-                            <div class="form-group col-11 m-4">
-                                <label style="font-size:20px;" for="formControlRange">1. Seberapa geregetnya kamu?</label>
-                                <input type="range" class="form-control-range customRange3" id="formControlRange">
-                            </div>
-
-<!--                            <span id="ex18-label-1" class="hidden">Example slider label</span>-->
-<!--                            <input id="ex19" type="text"-->
-<!--                                   data-provide="slider"-->
-<!--                                   data-slider-ticks="[1, 2, 3]"-->
-<!--                                   data-slider-ticks-labels='["short", "medium", "long"]'-->
-<!--                                   data-slider-min="1"-->
-<!--                                   data-slider-max="3"-->
-<!--                                   data-slider-step="1"-->
-<!--                                   data-slider-value="3"-->
-<!--                                   data-slider-tooltip="hide" />-->
-<!--                            -->
-<!---->
-<!--                            <input id="myslider"-->
-<!--                                   type="text"-->
-<!--                                   class="span2"-->
-<!--                                   value="5,10"-->
-<!--                                   data-slider-id="myslider"-->
-<!--                                   data-slider-min="2"-->
-<!--                                   data-slider-max="20"-->
-<!--                                   data-slider-step="2"-->
-<!--                                   data-slider-value="[5,10]"-->
-<!--                                   data-value="5,10"-->
-<!---->
-<!--                            />-->
-<!--                            <p id="slider"></p>-->
+                            <table class="table">
+<!--                        <label class="radio-inline">-->
+                            <div <div>1</div>
+                            <input type="radio" name="op" checked>
+<!--                        </label>-->
+<!--                        <label class="radio-inline">-->
+                            <div>2</div>
+                            <input type="radio" name="op">
+<!--                        </label>-->
+<!--                        <label class="radio-inline">-->
+                            <div>3</div>
+                            <input type="radio" name="op">
+<!--                        </label>-->
+                            </table>
+<!--                     <div class="custom-control custom-radio custom-control-inline">-->
+<!--                            <input type="radio" class="custom-control-input" id="op1" name="op1">-->
+<!--                            <label class="custom-control-label" for="defaultInline1">1</label>-->
+<!--                        </div>-->
+<!--                        <div class="custom-control custom-radio custom-control-inline">-->
+<!--                            <input type="radio" class="custom-control-input" id="op2" name="op2">-->
+<!--                            <label class="custom-control-label" for="op2">2</label>-->
+<!--                        </div>-->
+<!--                        <div class="custom-control custom-radio custom-control-inline">-->
+<!--                            <input type="radio" class="custom-control-input" id="op3" name="op3">-->
+<!--                            <label class="custom-control-label" for="op3">3</label>-->
+<!--                        </div>-->
                         <div class="text-center" >
                             <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter ">
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
