@@ -1,4 +1,13 @@
 <?php
+require '../php/redir.php';
+if ($row['tendency'] == null) {
+    header("Location: tendency.php");
+    die();
+}
+if ($row['id_news'] == null) {
+    header("Location: news.php");
+    die();
+}
 require 'templates/header.php';
 ?>
 
@@ -29,7 +38,7 @@ require 'templates/header.php';
                         </div>
 
 
-                    <form class="flex center-horizontal margin-bot-medium margin-top-large" action="#">
+                    <form class="flex center-horizontal margin-bot-medium margin-top-large" action="TFeeling.php">
                         <input type="submit" value="Lanjut ae dah" class="btn btn-outline-dark quarter">
                     </form>
                 </div>
