@@ -29,33 +29,123 @@ require 'templates/header.php';
                     </div>
                     <div class="ml-4">
                     <form class="center-horizontal margin-bot-medium" action="#">
-                            <table class="table">
-<!--                        <label class="radio-inline">-->
-                            <div <div>1</div>
-                            <input type="radio" name="op" checked>
-<!--                        </label>-->
-<!--                        <label class="radio-inline">-->
-                            <div>2</div>
-                            <input type="radio" name="op">
-<!--                        </label>-->
-<!--                        <label class="radio-inline">-->
-                            <div>3</div>
-                            <input type="radio" name="op">
-<!--                        </label>-->
-                            </table>
-<!--                     <div class="custom-control custom-radio custom-control-inline">-->
-<!--                            <input type="radio" class="custom-control-input" id="op1" name="op1">-->
-<!--                            <label class="custom-control-label" for="defaultInline1">1</label>-->
-<!--                        </div>-->
-<!--                        <div class="custom-control custom-radio custom-control-inline">-->
-<!--                            <input type="radio" class="custom-control-input" id="op2" name="op2">-->
-<!--                            <label class="custom-control-label" for="op2">2</label>-->
-<!--                        </div>-->
-<!--                        <div class="custom-control custom-radio custom-control-inline">-->
-<!--                            <input type="radio" class="custom-control-input" id="op3" name="op3">-->
-<!--                            <label class="custom-control-label" for="op3">3</label>-->
-<!--                        </div>-->
-                        <div class="text-center" >
+                        <div class="text-size-very-small">
+                            1. Seberapa geregetnya kamu?
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium colored" >
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-size-very-small padding-bot-large">
+                            2. Seberapa geregetnya kamu?
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-center padding-bot-large" >
                             <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter ">
                         </div>
                     </form>
