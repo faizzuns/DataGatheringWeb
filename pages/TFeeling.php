@@ -11,6 +11,7 @@ if ($row['id_news'] == null) {
 require 'templates/header.php';
 ?>
 
+<link rel="stylesheet" href="../css/TFeeling.css">
     <div class="bg">
     </div>
 
@@ -24,47 +25,263 @@ require 'templates/header.php';
                     <div class="margin-top-medium flex center-horizontal text-size-medium"><strong>Thermometer Feeling</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-large">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            Berikut ini terdapat beberapa pernyataan, Anda diminta untuk menilai seberapa sesuai karakteristik tersebut dengan Jokowi menggunakan 1-6 poin skala likert.
+                            <br>
+                            <br>
+                            1 =  Sangat tidak sesuai
+                            <br>
+                            2 = Tidak sesuai
+                            <br>
+                            3 = Agak tidak sesuai
+                            <br>
+                            4 = Agak sesuai
+                            <br>
+                            5 = Sesuai
+                            <br>
+                            6 = Sangat sesuai
+                        </div>
                     </div>
-
-
-
+                    <div class="ml-4">
                     <form class="center-horizontal margin-bot-medium" action="#">
-                        <form>
-                            <div class="form-group col-11 m-4">
-                                <label style="font-size:20px;" for="formControlRange">1. Seberapa geregetnya kamu?</label>
-                                <input type="range" class="form-control-range customRange3" id="formControlRange">
-                            </div>
+                        <div class="text-size-very-small">
+                            Presiden Jokowi dapat dipercaya
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium colored" >
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium colored">
+                                        <input type="radio" name="op1" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi menunjukkan penilaian yang baik dalam menghadapi masalah
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op2" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
 
-<!--                            <span id="ex18-label-1" class="hidden">Example slider label</span>-->
-<!--                            <input id="ex19" type="text"-->
-<!--                                   data-provide="slider"-->
-<!--                                   data-slider-ticks="[1, 2, 3]"-->
-<!--                                   data-slider-ticks-labels='["short", "medium", "long"]'-->
-<!--                                   data-slider-min="1"-->
-<!--                                   data-slider-max="3"-->
-<!--                                   data-slider-step="1"-->
-<!--                                   data-slider-value="3"-->
-<!--                                   data-slider-tooltip="hide" />-->
-<!--                            -->
-<!---->
-<!--                            <input id="myslider"-->
-<!--                                   type="text"-->
-<!--                                   class="span2"-->
-<!--                                   value="5,10"-->
-<!--                                   data-slider-id="myslider"-->
-<!--                                   data-slider-min="2"-->
-<!--                                   data-slider-max="20"-->
-<!--                                   data-slider-step="2"-->
-<!--                                   data-slider-value="[5,10]"-->
-<!--                                   data-value="5,10"-->
-<!---->
-<!--                            />-->
-<!--                            <p id="slider"></p>-->
-                        <div class="text-center" >
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi tidak jujur
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op3" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi peduli dengan
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op4" checked>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-center padding-bot-large" >
                             <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter ">
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
