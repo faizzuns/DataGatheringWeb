@@ -21,10 +21,10 @@ require 'templates/header.php';
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>ikan hiu makan hiu, yuk main yuk</strong></div>
+                    <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>Permainan Sederhana</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-very-large">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            Kalian diminta untuk menjawab berapakah angka yang berasal dari pola berikut!</div>
                     </div>
 
                     <div style="text-align:center;">
@@ -39,7 +39,7 @@ require 'templates/header.php';
 
 
                     <form class="flex center-horizontal margin-bot-medium margin-top-large" action="TFeeling.php">
-                        <input type="submit" value="Lanjut ae dah" class="btn btn-outline-dark quarter">
+                        <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter">
                     </form>
                 </div>
 
