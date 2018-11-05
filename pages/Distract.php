@@ -21,29 +21,26 @@ require 'templates/header.php';
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>ikan hiu makan hiu, yuk main yuk</strong></div>
+                    <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>Permainan Sederhana</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-very-large">
-                            Berikut merupakan sebuah soal dimana masing-masing buah memiliki nilai tertentu. Dapatkah kamu melengkapi penjumlahan buah yang belum terjawab?
-                        </div>
+                            Kalian diminta untuk menjawab berapakah angka yang berasal dari pola berikut!</div>
                     </div>
-
                     <div style="text-align:center;">
                         <img style="width:50%; height:60%; padding-top: 2%" src="../upload/quiz1.png" >
                     </div>
                     <div class="form-group " style="font-size:18px">
-                        <div class="margin-top-large" style="text-align: center">Berapakah jawabannya?</div>
-                         </div>
-                        <div style="text-align: center">
-                            <input class="col-2"  type="text" class="form-control" id="nama" >
-                        </div>
-
-
-                    <form class="flex center-horizontal margin-bot-medium margin-top-large" action="TFeeling.php">
-                        <input type="submit" value="Lanjut ae dah" class="btn btn-outline-dark quarter">
+                        <form method="POST" class="flex center-horizontal margin-bot-medium margin-top-large" id="form_answer" onsubmit="checkAnswer()">
+                            <div class="margin-top-large" style="text-align: center">Berapakah jawabannya?</div>
+                             </div>
+                            <div style="text-align: center">
+                                <input class="col-2"  type="text" class="form-control" id="jawaban" nama="jawaban" >
+                            </div>
+                            <div style="text-align: center" class="padding-bot-large">
+                            <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter">
+                            </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
@@ -53,6 +50,12 @@ require 'templates/footer.php';
 ?>
 
 <script>
-
-
+    function checkAnswer() {
+        if (document.getElementById('jawaban').value == 11) {
+            document.getElementById("form_answer").action = "TFeeling.php";
+        }
+        else {
+            document.getElementById("form_answer").action = "DistractAnswer.php";
+        }
+    }
 </script>

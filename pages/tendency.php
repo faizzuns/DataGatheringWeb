@@ -18,7 +18,7 @@
                     <div class="margin-top-medium flex center-horizontal text-size-medium" style="text-align: center"><strong>Kecenderungan Politik</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-large">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim labore et dolore magna aliqua. Ut enim labore et dolore magna aliqua. Ut enim</div>
+                        </div>
                     </div>
                     <form method="post" class="margin-bot-medium" action="../php/tendency-action.php">
                         <div class="margin-left-very-large margin-right-very-large margin-bot-medium">
