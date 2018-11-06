@@ -1,20 +1,26 @@
 <?php
 require '../php/redir.php';
-if ($row['tendency'] == null) {
+if (!isset($_POST['tendency'])) {
     header("Location: tendency.php");
     die();
 }
 require 'templates/header.php';
 require '../php/connect.php';
-    $sql = 'SELECT ahmadfai_gather.`transaction`.id_news FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.id = ' . $_COOKIE['trans'];
+$sql = "UPDATE ahmadfai_gather.`transaction` SET ahmadfai_gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE ahmadfai_gather.`transaction`.id = " . $_COOKIE['trans'];
+if ($conn->query($sql) === FALSE) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    die();
+}
+
+$sql = 'SELECT ahmadfai_gather.`transaction`.id_news FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.id = ' . $_COOKIE['trans'];
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
         if ($row['id_news'] == NULL) {
-            if ($_COOKIE['tendency'] == 10) {
+            if ($_POST['tendency'] == 10) {
                 $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency = 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
-            } else if ($_COOKIE['tendency'] < 10) {
+            } else if ($_POST['tendency'] < 10) {
                 $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency < 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
-            } else if ($_COOKIE['tendency'] > 10) {
+            } else if ($_POST['tendency'] > 10) {
                 $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency > 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
             }
 

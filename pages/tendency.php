@@ -20,7 +20,7 @@
                             Anda diminta untuk menentukan posisi Anda apakah mendukung Jokowi atau mendukung Prabwo dari rentang skala 0-10 dibawah ini. Tunjukkan posisi Anda dengan cara menggeser lingkaran hitam dibawah ini sesuai dengan derajat yang telah ditentukan!
                         </div>
                     </div>
-                    <form method="post" class="margin-bot-medium" action="../php/tendency-action.php">
+                    <form method="post" class="margin-bot-medium" action="news.php">
                         <div class="margin-left-very-large margin-right-very-large margin-bot-medium">
                             <div class="flex center-horizontal">
                                 <input name="tendency" type="range" class="custom-range" min="0" max="20" id="customRange3" oninput="changeDetail(customRange3.value)">
