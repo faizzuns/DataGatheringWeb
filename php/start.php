@@ -7,7 +7,7 @@
  */
 
     require 'connect.php';
-    $sql = 'INSERT INTO gather.`transaction` (gather.`transaction`.name, gather.`transaction`.age, gather.`transaction`.profesi, gather.`transaction`.pendidikan, gather.`transaction`.from) VALUES ("' . $_POST["name"] . '",' . $_POST["age"] . ',"' . $_POST["profesi"] . '","' . $_POST["pendidikan"] . '","' . $_POST["from"] . '")';
+    $sql = 'INSERT INTO ahmadfai_gather.`transaction` (ahmadfai_gather.`transaction`.name, ahmadfai_gather.`transaction`.age, ahmadfai_gather.`transaction`.profesi, ahmadfai_gather.`transaction`.pendidikan, ahmadfai_gather.`transaction`.from) VALUES ("' . $_POST["name"] . '",' . $_POST["age"] . ',"' . $_POST["profesi"] . '","' . $_POST["pendidikan"] . '","' . $_POST["from"] . '")';
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;
 

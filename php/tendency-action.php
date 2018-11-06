@@ -8,7 +8,7 @@
  */
 
 require 'connect.php';
-$sql = "UPDATE gather.`transaction` SET gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE gather.`transaction`.id = " . $_COOKIE['trans'];
+$sql = "UPDATE ahmadfai_gather.`transaction` SET ahmadfai_gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE ahmadfai_gather.`transaction`.id = " . $_COOKIE['trans'];
 if ($conn->query($sql) === TRUE) {
     setcookie('tendency', $_POST['tendency'], time()+3600, '/');
     header('Location: ../pages/news.php');

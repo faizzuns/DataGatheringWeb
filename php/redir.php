@@ -8,7 +8,7 @@
 require 'connect.php';
 
 if (isset($_COOKIE['trans'])) {
-    $sql = "SELECT * FROM gather.`transaction` WHERE gather.`transaction`.id = " .$_COOKIE['trans'];
+    $sql = "SELECT * FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.id = " .$_COOKIE['trans'];
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 
