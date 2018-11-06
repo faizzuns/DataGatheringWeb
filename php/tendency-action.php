@@ -7,7 +7,7 @@
  * Time: 9:41 PM
  */
 
-header("Location: ../pages/news.php");
+header("Location: http://ahmadfaiz.us/gather/pages/home.php");
 die();
 
 //require 'connect.php';

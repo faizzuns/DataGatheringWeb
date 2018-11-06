@@ -1,5 +1,4 @@
 <?php
-ob_start();
 require '../php/redir.php';
 if ($row['tendency'] == null) {
     header("Location: tendency.php");
