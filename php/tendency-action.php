@@ -8,13 +8,13 @@
  */
 
 require 'connect.php';
-echo "START";
+//echo "START";
 $sql = "UPDATE ahmadfai_gather.`transaction` SET ahmadfai_gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE ahmadfai_gather.`transaction`.id = " . $_COOKIE['trans'];
 if ($conn->query($sql) === TRUE) {
-    setcookie('tendency', $_POST['tendency'], time()+3600, '/');
-    if (isset($_COOKIE['tendency'])) {
-        echo "UHUI";
-    }
+//    setcookie('tendency', $_POST['tendency'], time()+3600, '/');
+//    if (isset($_COOKIE['tendency'])) {
+//        echo "UHUI";
+//    }
     header('Location: ../pages/news.php');
     die();
 } else {
