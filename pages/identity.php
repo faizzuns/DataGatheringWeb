@@ -16,7 +16,6 @@
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium flex center-horizontal text-size-medium text-center"><strong>Pengisian Identitas</strong></div>
                     <div class="flex center-horizontal text-size-very-small margin-top-medium" style="text-align: justify;">
                     </div>
                     <form method="post" action="../php/start.php" style="margin-top:-15px">

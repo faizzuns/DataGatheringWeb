@@ -26,7 +26,6 @@ if ($_GET['category'] == '2') {
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium flex center-horizontal text-size-medium"><strong>Ralat Berita</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-large">
                             <?php echo $content;?>
