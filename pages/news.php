@@ -17,11 +17,11 @@ $sql = 'SELECT ahmadfai_gather.`transaction`.id_news FROM ahmadfai_gather.`trans
     while ($row = $result->fetch_assoc()) {
         if ($row['id_news'] == NULL) {
             if ($_POST['tendency'] == 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency = 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
+                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency = 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
             } else if ($_POST['tendency'] < 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency < 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
+                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency < 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
             } else if ($_POST['tendency'] > 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` INNER JOIN ahmadfai_gather.`question` ON ahmadfai_gather.`transaction`.id = ahmadfai_gather.`question`.idtransaction WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency > 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
+                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency > 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
             }
 
             $result = $conn->query($sql);
