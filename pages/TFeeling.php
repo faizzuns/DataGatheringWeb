@@ -42,7 +42,7 @@ require 'templates/header.php';
                         </div>
                     </div>
                     <div class="ml-4">
-                    <form class="center-horizontal margin-bot-medium" action="#">
+                    <form method="POST" class="center-horizontal margin-bot-medium" action="../php/TFeeling-action.php">
                         <div class="text-size-very-small">
                             Presiden Jokowi dapat dipercaya
                         </div>
@@ -51,32 +51,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium colored" >
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="1" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="2"  checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="3"  checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="4"  checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="5"  checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" checked>
+                                        <input type="radio" name="op1" value="6"  checked>
                                     </div>
                                 </td>
                             </tr>
@@ -109,32 +109,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="1" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="2" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="3" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="4" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="5" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" checked>
+                                        <input type="radio" name="op2" value="6" checked>
                                     </div>
                                 </td>
                             </tr>
@@ -168,32 +168,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="1" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="2" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="3" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="4" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="5" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" checked>
+                                        <input type="radio" name="op3" value="6" checked>
                                     </div>
                                 </td>
                             </tr>
@@ -227,32 +227,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="1" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="2" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="3" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="4" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="5" checked>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" checked>
+                                        <input type="radio" name="op4" value="6" checked>
                                     </div>
                                 </td>
                             </tr>
@@ -292,9 +292,14 @@ require 'templates/footer.php';
 ?>
 
 <script language="javascript">
-    var mySlider = new Slider('#myslider');
-    mySlider.on('slideStop', function(value) {
-        document.getElementById('slider').innerHTML = value;
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            var rvalue = $("input[name='op1']:checked").val();
+            if(rvalue){
+                alert("Your are a - " + rvalue);
+            }
+        });
+
     });
 </script>
 

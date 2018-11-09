@@ -52,10 +52,13 @@ require 'templates/footer.php';
 <script>
     function checkAnswer() {
         if (document.getElementById('jawaban').value == 11) {
+            alert("Jawaban anda benar!");
             document.getElementById("form_answer").action = "TFeeling.php";
+            return true;
         }
         else {
-            document.getElementById("form_answer").action = "DistractAnswer.php";
+            alert("Jawaban salah. Coba lagi!");
+            return false;
         }
     }
 </script>
