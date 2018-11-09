@@ -21,7 +21,6 @@ require 'templates/header.php';
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium margin-bot-large flex center-horizontal text-size-medium"><strong>Permainan Sederhana</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-very-large">
                             Kalian diminta untuk menjawab berapakah angka yang berasal dari pola berikut!</div>

@@ -1,4 +1,19 @@
 <?php
+if (isset($_POST['op1'])) {
+    require '../php/connect.php';
+    $sql = 'INSERT INTO gather.`question` (gather.`question`.idtransaction, gather.`question`.number, gather.`question`.value) VALUES (' . $_COOKIE["trans"] . ', 1,' . $_POST["op1"] . ')';
+    $conn->query($sql);
+    $sql = 'INSERT INTO gather.`question` (gather.`question`.idtransaction, gather.`question`.number, gather.`question`.value) VALUES (' . $_COOKIE["trans"] . ', 2,' . $_POST["op2"] . ')';
+    $conn->query($sql);
+    $sql = 'INSERT INTO gather.`question` (gather.`question`.idtransaction, gather.`question`.number, gather.`question`.value) VALUES (' . $_COOKIE["trans"] . ', 3,' . $_POST["op3"] . ')';
+    $conn->query($sql);
+    $sql = 'INSERT INTO gather.`question` (gather.`question`.idtransaction, gather.`question`.number, gather.`question`.value) VALUES (' . $_COOKIE["trans"] . ', 4,' . $_POST["op4"] . ')';
+    $conn->query($sql);
+    $conn->close();
+    setcookie("trans", '', time() - 3600, '/');
+    header('Location: thank-you.php');
+    die();
+}
 require '../php/redir.php';
 if ($row['tendency'] == null) {
     header("Location: tendency.php");
@@ -22,7 +37,6 @@ require 'templates/header.php';
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium flex center-horizontal text-size-medium"><strong>Thermometer Feeling</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-large">
                             Berikut ini terdapat beberapa pernyataan, Anda diminta untuk menilai seberapa sesuai karakteristik tersebut dengan Jokowi menggunakan 1-6 poin skala likert.
@@ -42,7 +56,7 @@ require 'templates/header.php';
                         </div>
                     </div>
                     <div class="ml-4">
-                    <form method="POST" class="center-horizontal margin-bot-medium" action="../php/TFeeling-action.php">
+                    <form method="post" class="center-horizontal margin-bot-medium" action="TFeeling.php">
                         <div class="text-size-very-small">
                             Presiden Jokowi dapat dipercaya
                         </div>
@@ -51,32 +65,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium colored" >
-                                        <input type="radio" name="op1" value="1" checked>
+                                        <input type="radio" name="op1" value="1">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" value="2"  checked>
+                                        <input type="radio" name="op1" value="2">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" value="3"  checked>
+                                        <input type="radio" name="op1" value="3" required>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" value="4"  checked>
+                                        <input type="radio" name="op1" value="4">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" value="5"  checked>
+                                        <input type="radio" name="op1" value="5">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium colored">
-                                        <input type="radio" name="op1" value="6"  checked>
+                                        <input type="radio" name="op1" value="6">
                                     </div>
                                 </td>
                             </tr>
@@ -109,32 +123,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op2" value="1" checked>
+                                        <input type="radio" name="op2" value="1">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" value="2" checked>
+                                        <input type="radio" name="op2" value="2">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" value="3" checked>
+                                        <input type="radio" name="op2" required value="3">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" value="4" checked>
+                                        <input type="radio" name="op2" value="4">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" value="5" checked>
+                                        <input type="radio" name="op2" value="5">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op2" value="6" checked>
+                                        <input type="radio" name="op2" value="6">
                                     </div>
                                 </td>
                             </tr>
@@ -168,32 +182,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op3" value="1" checked>
+                                        <input type="radio" name="op3" value="1">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" value="2" checked>
+                                        <input type="radio" name="op3" value="2">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" value="3" checked>
+                                        <input type="radio" name="op3" required value="3">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" value="4" checked>
+                                        <input type="radio" name="op3" value="4">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" value="5" checked>
+                                        <input type="radio" name="op3" value="5">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op3" value="6" checked>
+                                        <input type="radio" name="op3" value="6">
                                     </div>
                                 </td>
                             </tr>
@@ -227,32 +241,32 @@ require 'templates/header.php';
                             <tr>
                                 <td>
                                     <div class="text-center padding-right-medium" >
-                                        <input type="radio" name="op4" value="1" checked>
+                                        <input type="radio" name="op4" value="1">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" value="2" checked>
+                                        <input type="radio" name="op4" value="2">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" value="3" checked>
+                                        <input type="radio" name="op4" required value="3">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" value="4" checked>
+                                        <input type="radio" name="op4" value="4">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" value="5" checked>
+                                        <input type="radio" name="op4" value="5">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center padding-right-medium">
-                                        <input type="radio" name="op4" value="6" checked>
+                                        <input type="radio" name="op4" value="6">
                                     </div>
                                 </td>
                             </tr>

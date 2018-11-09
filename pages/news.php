@@ -1,21 +1,28 @@
 <?php
 require '../php/redir.php';
-if ($row['tendency'] == null) {
+if (!isset($_POST['tendency'])) {
     header("Location: tendency.php");
     die();
 }
 require 'templates/header.php';
 require '../php/connect.php';
-    $sql = 'SELECT gather.`transaction`.id_news FROM gather.`transaction` WHERE gather.`transaction`.id = ' . $_COOKIE['trans'];
+$sql = "UPDATE gather.`transaction` SET gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE gather.`transaction`.id = " . $_COOKIE['trans'];
+if ($conn->query($sql) === FALSE) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    die();
+}
+
+
+$sql = 'SELECT gather.`transaction`.id_news FROM gather.`transaction` WHERE gather.`transaction`.id = ' . $_COOKIE['trans'];
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
         if ($row['id_news'] == NULL) {
-            if ($_COOKIE['tendency'] == 10) {
-                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency = 10 GROUP BY gather.`transaction`.id_news";
-            } else if ($_COOKIE['tendency'] < 10) {
-                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency < 10 GROUP BY gather.`transaction`.id_news";
-            } else if ($_COOKIE['tendency'] > 10) {
-                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` INNER JOIN gather.`question` ON gather.`transaction`.id = gather.`question`.idtransaction WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency > 10 GROUP BY gather.`transaction`.id_news";
+            if ($_POST['tendency'] == 10) {
+                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency = 10 GROUP BY gather.`transaction`.id_news";
+            } else if ($_POST['tendency'] < 10) {
+                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency < 10 GROUP BY gather.`transaction`.id_news";
+            } else if ($_POST['tendency'] > 10) {
+                $sql = "SELECT gather.`transaction`.id_news, COUNT(*) AS total FROM gather.`transaction` WHERE gather.`transaction`.tendency IS NOT NULL AND gather.`transaction`.id_news IS NOT NULL AND gather.`transaction`.tendency > 10 GROUP BY gather.`transaction`.id_news";
             }
 
             $result = $conn->query($sql);
@@ -123,7 +130,6 @@ Salah satu bukti pembangunan infrastruktur membebani keuangan negara semakin nya
             <div class="col-8">
                 <div style="height: 70px;"></div>
                 <div class="box-home padding-medium">
-                    <div class="margin-top-medium flex center-horizontal text-size-medium"><strong>Berita</strong></div>
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="margin-large">
                             <?php echo $content;?>
