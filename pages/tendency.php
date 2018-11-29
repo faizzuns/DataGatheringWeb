@@ -1,5 +1,23 @@
 <?php
-    require'../php/redir.php';
+    if (!isset($_POST['status'])) {
+        header("Location: home.php");
+        die();
+    }
+    if ($_POST['status'] == 1) {
+        $name = $_POST['name'];
+        $age = $_POST['age'];
+        $profession = $_POST['profession'];
+        $education = $_POST['education'];
+        $phone = $_POST['phone'];
+        $location = $_POST['location'];
+        require '../php/regis_user.php';
+    } else {
+        $option1 = $_POST['op1'];
+        $option2 = $_POST['op2'];
+        $option3 = $_POST['op3'];
+        $option4 = $_POST['op4'];
+        require '../php/fill_question2.php';
+    }
     require 'templates/header.php';
 ?>
 
@@ -20,16 +38,16 @@
                             Anda diminta untuk menentukan posisi Anda apakah mendukung Jokowi atau mendukung Prabwo dari rentang skala 0-10 dibawah ini. Tunjukkan posisi Anda dengan cara menggeser lingkaran hitam dibawah ini sesuai dengan derajat yang telah ditentukan!
                         </div>
                     </div>
-                    <form method="post" class="margin-bot-medium" action="news.php">
+                    <form method="post" class="margin-bot-medium" action=<?php if ($_POST['status'] == 1) echo "'news.php'"; else echo "'thank-you.php'"; ?>>
                         <div class="margin-left-very-large margin-right-very-large margin-bot-medium">
                             <div class="flex center-horizontal">
-                                <input name="tendency" type="range" class="custom-range" min="0" max="20" id="customRange3" oninput="changeDetail(customRange3.value)">
+                                <input name="tendency" type="range" class="custom-range" min="0" max="10" id="customRange3" oninput="changeDetail(customRange3.value)">
                             </div>
                             <div class="center-horizontal flex">
                                 <div class="flex space-beetween full-width margin-top-small">
-                                    <div class="flex" style="width: 5%">10</div>
-                                    <div class="flex center-horizontal" style="width: 5%">0</div>
-                                    <div class="flex align-right" style="width: 5%">10</div>
+                                    <div class="flex" style="width: 5%">0</div>
+                                    <div class="flex center-horizontal" style="width: 5%">5</div>
+                                    <div class="flex align-right" style="width: 5%">0</div>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +60,7 @@
                             </div>
                             <div class="flex center-vertical">
                                 <div>
-                                    <div class="flex center-horizontal" style="font-size: 50px;" id="value">0</div>
+                                    <div class="flex center-horizontal" style="font-size: 50px;" id="value">5</div>
                                     <div class="flex center-horizontal" id="name">Netral</div>
                                 </div>
                             </div>
@@ -67,13 +85,13 @@
         let number = document.getElementById('value');
         let name = document.getElementById('name');
         let comment = 'Netral';
-        let x = 0;
-        if (val < 10) {
+        let x = 5;
+        if (val < 5) {
             comment = 'Prabowo';
-            x = 10 - val;
-        } else if (val > 10) {
+            x = val;
+        } else if (val > 5) {
             comment = 'Jokowi';
-            x = val - 10;
+            x = 5 - (val - 5);
         }
 
         name.innerHTML = comment;
