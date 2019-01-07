@@ -1,12 +1,17 @@
 <?php
-require '../php/redir.php';
-if ($row['tendency'] == null) {
-    header("Location: tendency.php");
+if (!isset($_POST['category']) || !isset($_COOKIE['fill'])) {
+    header('Location: home.php');
     die();
 }
 require 'templates/header.php';
 
-if ($_GET['category'] == '2') {
+$option1 = $_POST['op1'];
+$option2 = $_POST['op2'];
+$option3 = $_POST['op3'];
+$option4 = $_POST['op4'];
+require '../php/fill_question1.php';
+
+if ($_POST['category'] == '2') {
     $content = '
     <p>Dilansir dari kompas.com pada tanggal 19 Januari 2018, berita dengan judul Jokowi: Pemerintah targetkan 3000 Kapal untuk Nelayan Lokal di tahun 2018 telah ditarik. Kompas.com menyatakan bahwa ternyata berita yang dipulbikasi sehari yang lalu adalah berita yang tidak valid kebenerannya. Selain itu, kompas.com melakukan ralat terhadap informasi tersebut yakni program 3000 Kapal untuk Nelayan sebenarnya bukanlah program yang dicanangkan oleh pemerintah. Melainkan, salah satu program Corporate Social Responsibility (CSR) dari salah satu perusahaan swasta yang bergerak di bidang tambang mineral. Oleh karena itu, tim redaksi dari kompas.com melakukan permohonan maaf karena sudah menyebarkan informasi yang tidak dapat dipercaya.</p>
     ';
@@ -31,7 +36,8 @@ if ($_GET['category'] == '2') {
                             <?php echo $content;?>
                         </div>
                     </div>
-                    <form class="flex center-horizontal margin-bot-medium" action="Distract.php">
+                    <form method="post" class="flex center-horizontal margin-bot-medium" action="Distract.php">
+                        <input type="hidden" name="category" value=<?php echo "'" . $_POST['category'] . "'";?>>
                         <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter">
                     </form>
                 </div>

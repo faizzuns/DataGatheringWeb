@@ -3,8 +3,7 @@ if (!isset($_POST['category']) || !isset($_COOKIE['fill'])) {
     header('Location: home.php');
     die();
 }
-if ($_POST['category'] > 1) $next = 'correction-news.php';
-else $next = 'Distract.php';
+$next = 'tendency.php';
 
 require 'templates/header.php';
 ?>
@@ -40,8 +39,7 @@ require 'templates/header.php';
                     </div>
                     <div class="ml-4">
                     <form method="post" class="center-horizontal margin-bot-medium" action=<?php echo "'$next'"?>>
-                        <input type="hidden" name="category" value=<?php echo "'" . $_POST['category'] . "'";?>>
-                        <input type="hidden" name="serialize" value="true">
+                        <input type="hidden" name="status" value="2">
                         <div class="text-size-very-small">
                             Presiden Jokowi dapat dipercaya
                         </div>

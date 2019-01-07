@@ -1,71 +1,23 @@
 <?php
-require '../php/redir.php';
-if (!isset($_POST['tendency'])) {
-    header("Location: tendency.php");
+if (!isset($_POST['tendency']) || !isset($_COOKIE['fill'])) {
+    header("Location: home.php");
     die();
 }
 require 'templates/header.php';
 require '../php/connect.php';
-$sql = "UPDATE ahmadfai_gather.`transaction` SET ahmadfai_gather.`transaction`.tendency = " . $_POST['tendency'] . " WHERE ahmadfai_gather.`transaction`.id = " . $_COOKIE['trans'];
+$sql = "UPDATE `fill` SET `fill`.tendency_1 = " . $_POST['tendency'] . " WHERE `fill`.id = " . $_COOKIE['fill'];
 if ($conn->query($sql) === FALSE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
     die();
 }
-
-$sql = 'SELECT ahmadfai_gather.`transaction`.id_news FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.id = ' . $_COOKIE['trans'];
-    $result = $conn->query($sql);
-    while ($row = $result->fetch_assoc()) {
-        if ($row['id_news'] == NULL) {
-            if ($_POST['tendency'] == 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency = 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
-            } else if ($_POST['tendency'] < 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency < 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
-            } else if ($_POST['tendency'] > 10) {
-                $sql = "SELECT ahmadfai_gather.`transaction`.id_news, COUNT(*) AS total FROM ahmadfai_gather.`transaction` WHERE ahmadfai_gather.`transaction`.tendency IS NOT NULL AND ahmadfai_gather.`transaction`.id_news IS NOT NULL AND ahmadfai_gather.`transaction`.tendency > 10 GROUP BY ahmadfai_gather.`transaction`.id_news";
-            }
-
-            $result = $conn->query($sql);
-            $news1 = 0; //netral
-            $news2 = 0; //positif
-            $news3 = 0; //negatif
-            while ($row = $result->fetch_assoc()) {
-                if ($row['id_news'] == 1) {
-                    $news1 = $news1 + $row['total'];
-                } else if ($row['id_news'] == 2) {
-                    $news2 = $news2 + $row['total'];
-                } else {
-                    $news3 = $news3 + $row['total'];
-                }
-            }
-
-            if ($news1 < $news2) {
-                if ($news1 < $news3) {
-                    $min = 1;
-                } else {
-                    $min = 3;
-                }
-            } else if ($news2 < $news3) {
-                $min = 2;
-            } else {
-                $min = 3;
-            }
-        } else {
-            $min = $row['id_news'];
-        }
-    }
-
-    if ($min > 1) {
-        $next = 'correction-news.php';
-    } else {
-        $next = 'Distract.php';
-    }
-
-$sql = "UPDATE ahmadfai_gather.`transaction` SET ahmadfai_gather.`transaction`.id_news = " . $min . " WHERE ahmadfai_gather.`transaction`.id = " . $_COOKIE['trans'];
-if ($conn->query($sql) === FALSE) {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-    die();
-}
+$sql = "SELECT * FROM `fill` WHERE `fill`.id = " . $_COOKIE['fill'];
+$min = -1;
+$tend = $_POST['tendency'];
+$result = $conn->query($sql);
+while ($row = $result->fetch_assoc()) if ($row['id_news'] != NULL) $min = $row['id_news'];
 $conn->close();
+
+if ($min == -1) require '../php/update-news.php';
 
 if ($min == 1) {
     $content = '
@@ -134,7 +86,7 @@ Salah satu bukti pembangunan infrastruktur membebani keuangan negara semakin nya
                             <?php echo $content;?>
                         </div>
                     </div>
-                    <form method="get" class="flex center-horizontal margin-bot-medium" action=<?php echo "\"" . $next . "\""?>>
+                    <form method="post" class="flex center-horizontal margin-bot-medium" action="TFeeling.php">
                         <input type="hidden" name="category" value=<?php echo "'" . $min . "'";?>>
                         <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter">
                     </form>
