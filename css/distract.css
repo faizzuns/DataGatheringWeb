@@ -44,7 +44,7 @@ p {
     border: 0;
     outline: none;
     font: 1em sans-serif;
-    color: #6891ad;
+    color: #ffffff;
 }
 
 button::-moz-focus-inner {
@@ -63,7 +63,7 @@ button::-moz-focus-inner {
 
 /* indicates that the square is part of a word that has been found */
 #puzzle .found {
-    color: #c4c4c4;
+    color: #eedb0d;
 }
 
 #puzzle .solved {

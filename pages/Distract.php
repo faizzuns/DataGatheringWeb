@@ -30,7 +30,10 @@ require 'templates/header.php';
                 <div class="box-home padding-medium">
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="puzzleWrap">
-                            <p>Cari 6 dari 10 kata dibawah ini untuk melanjutkan!</p>
+                            <p><strong>Cari 6 dari 10 kata dibawah ini untuk melanjutkan!</strong><br></p>
+                            <br>
+                            Swipe kata secara horizontal, vertikal, dan diagonal. Kata yang telah ditemukan akan berubah warna pada puzzle dan list kata di samping/bawah
+                            <br>
                             <div id='puzzle'></div>
                             <div id='words'>
                                 <form id="submit" method="POST" action="TFeeling2.php">
