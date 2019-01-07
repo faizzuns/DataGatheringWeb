@@ -9,6 +9,9 @@ $option1 = $_POST['op1'];
 $option2 = $_POST['op2'];
 $option3 = $_POST['op3'];
 $option4 = $_POST['op4'];
+$option5 = $_POST['op5'];
+$option6 = $_POST['op6'];
+$option7 = $_POST['op7'];
 require '../php/fill_question1.php';
 
 if ($_POST['category'] == '2') {
