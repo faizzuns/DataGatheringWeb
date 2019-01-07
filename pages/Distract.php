@@ -8,6 +8,9 @@ if (isset($_POST['serialize'])) {
     $option2 = $_POST['op2'];
     $option3 = $_POST['op3'];
     $option4 = $_POST['op4'];
+    $option5 = $_POST['op5'];
+    $option6 = $_POST['op6'];
+    $option7 = $_POST['op7'];
     require '../php/fill_question1.php';
 }
 require 'templates/header.php';
@@ -27,9 +30,12 @@ require 'templates/header.php';
                 <div class="box-home padding-medium">
                     <div class="flex center-horizontal text-size-very-small" style="text-align: justify">
                         <div class="puzzleWrap">
-                            <p>Cari 10 kata dibawah ini untuk melanjutkan!</p>
+                            <p>Cari 6 dari 10 kata dibawah ini untuk melanjutkan!</p>
                             <div id='puzzle'></div>
                             <div id='words'>
+                                <form id="submit" method="POST" action="TFeeling2.php">
+                                    <input type="hidden" name="category" value=<?php echo "'" . $_POST['category'] . "'";?>>
+                                </form>
                                 <button id='solve'>Selesai</button>
                             </div>
                         </div>
@@ -909,10 +915,10 @@ require 'templates/footer.php';
                     wordFound = wordFound + 1;
                 }
             }
-            if (wordFound < 10) {
+            if (wordFound < 6) {
                 alert("Kamu baru mendapatkan " + wordFound + " kata.");
             } else {
-                console.log("BENAR");
+                document.getElementById("submit").submit();
             }
             // wordfindgame.solve(gamePuzzle, words);
         });

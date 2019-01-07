@@ -43,7 +43,7 @@ require 'templates/header.php';
                         <input type="hidden" name="category" value=<?php echo "'" . $_POST['category'] . "'";?>>
                         <input type="hidden" name="serialize" value="true">
                         <div class="text-size-very-small">
-                            Presiden Jokowi dapat dipercaya
+                            Presiden Jokowi menunjukkan kepemimpinan yang kuat
                         </div>
                         <table class="table-responsive">
                             <th style="text-align: center"></th>
@@ -100,8 +100,9 @@ require 'templates/header.php';
                                 </td>
                             </tr>
                         </table>
+
                         <div class="text-size-very-small padding-bot-large">
-                            Presiden Jokowi menunjukkan penilaian yang baik dalam menghadapi masalah
+                            Presiden Jokowi tegas
                         </div>
                         <table class="table-responsive">
                             <th style="text-align: center"></th>
@@ -160,7 +161,7 @@ require 'templates/header.php';
                         </table>
 
                         <div class="text-size-very-small padding-bot-large">
-                            Presiden Jokowi tidak jujur
+                            Presiden Jokowi berpengetahuan luas
                         </div>
                         <table class="table-responsive">
                             <th style="text-align: center"></th>
@@ -219,7 +220,7 @@ require 'templates/header.php';
                         </table>
 
                         <div class="text-size-very-small padding-bot-large">
-                            Presiden Jokowi peduli dengan
+                            Presiden Jokowi cerdas
                         </div>
                         <table class="table-responsive">
                             <th style="text-align: center"></th>
@@ -276,6 +277,184 @@ require 'templates/header.php';
                                 </td>
                             </tr>
                         </table>
+
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi bermoral
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op5" value="1">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op5" value="2">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op5" required value="3">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op5" value="4">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op5" value="5">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op5" value="6">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi jujur
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op6" value="1">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op6" value="2">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op6" required value="3">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op6" value="4">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op6" value="5">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op6" value="6">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="text-size-very-small padding-bot-large">
+                            Presiden Jokowi peduli
+                        </div>
+                        <table class="table-responsive">
+                            <th style="text-align: center"></th>
+                            <tr>
+                                <td>
+                                    <div class="text-center padding-right-medium" >
+                                        <input type="radio" name="op7" value="1">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op7" value="2">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op7" required value="3">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op7" value="4">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op7" value="5">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center padding-right-medium">
+                                        <input type="radio" name="op7" value="6">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">1</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">2</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">3</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">4</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">5</div>
+                                </td>
+                                <td>
+                                    <div class="text-size-very-very-small text-center padding-right-medium">6</div>
+                                </td>
+                            </tr>
+                        </table>
+
                         <div class="text-center padding-bot-large" >
                             <input type="submit" value="Lanjut" class="btn btn-outline-dark quarter ">
                         </div>
