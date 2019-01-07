@@ -32,7 +32,8 @@
                         </div>
                         <div class="margin-large">
                             <div class="form-group" style="font-size:18px">
-                                <input require="" type="text" name="phone" class="form-control" id="domisili" placeholder="Nomor Telepon (Opsional  jika anda tertarik mengikuti undian gopay)">
+                                <input require="" type="text" name="phone" class="form-control" id="domisili" placeholder="Nomor Telepon">
+                                <small id="telpHelp" class="form-text text-muted">(Opsional  jika anda tertarik mengikuti undian gopay)</small>
                             </div>
                         </div>
                         <div class="margin-large">
@@ -59,6 +60,7 @@
                                 <option value="S2">S2</option>
                                 <option value="S3">S3</option>
                             </select>
+                            <small id="pendidikanHelp" class="form-text text-muted">Pendidikan Terakhir yang sudah ditamatkan</small>
                         </div>
                         <div class="margin-large">
                             <select name="province" class="form-control" required onchange="select_city(value)">
